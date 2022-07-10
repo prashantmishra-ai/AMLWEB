@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomePage | Banking Managment</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to the HomePage</h1>
+      <form action="/" method="post">
+        <label for="Age">Enter Your Age :</label>
+        <input type="number" name="age" required />
+        <br />
+        <label for="job">JOB :</label>
+        <select name="job">
+          {% for i in range(0,job|length) %}
+          <option value="{{job[i]}}">{{job[i]}}</option>
+          {% endfor %}
+        </select>
+        <br />
+        <label for="marital">Marital :</label>
+        <select name="marital">
+          {% for i in range(0,marital|length) %}
+          <option value="{{marital[i]}}">{{marital[i]}}</option>
+          {% endfor %}
+        </select>
+        <br />
+        <label for="education">Education :</label>
+        <select name="education">
+          {% for i in range(0,education|length) %}
+          <option value="{{education[i]}}">{{education[i]}}</option>
+          {% endfor %}
+        </select>
+        <br />
+        <label for="default">Default :</label>
+        <select name="default">
+          {% for i in range(0,default|length) %}
+          <option value="{{default[i]}}">{{default[i]}}</option>
+          {% endfor %}
+        </select>
+        <br />
+        <label for="housing">Housing :</label>
+        <select name="housing">
+          {% for i in range(0,housing|length) %}
+          <option value="{{housing[i]}}">{{housing[i]}}</option>
+          {% endfor %}
+        </select>
+        <br />
+
+        <label for="loan">Loan :</label>
+        <select name="loan">
+          {% for i in range(0,loan|length) %}
+          <option value="{{loan[i]}}">{{loan[i]}}</option>
+          {% endfor %}
+        </select>
+        <br />
+        <label for="contact">Contact :</label>
+        <select name="contact">
+          {% for i in range(0,contact|length) %}
+          <option value="{{contact[i]}}">{{contact[i]}}</option>
+          {% endfor %}
+        </select>
+        <br />
+        <label for="month">Month :</label>
+        <select name="month">
+          {% for i in range(0,month|length) %}
+          <option value="{{month[i]}}">{{month[i]}}</option>
+          {% endfor %}
+        </select>
+        <br />
+        <label for="duration">Duration :</label>
+        <input type="number" name="duration" />
+        <br />
+        <label for="campaign">Campaign :</label>
+        <input type="number" name="campaign" />
+        <br />
+        <label for="pdays">Pdays :</label>
+        <input type="number" name="pdays" />
+        <br />
+        <label for="previous">Previous :</label>
+        <input type="number" name="previous" />
+        <br />
+        <label for="poutcome">Poutcome :</label>
+        <select name="poutcome">
+          {% for i in range(0,poutcome|length) %}
+          <option value="{{poutcome[i]}}">{{poutcome[i]}}</option>
+          {% endfor %}
+        </select>
+        <br />
+        <label for="emp.var.rate">Emp Var Rate :</label>
+        <input type="number" name="emp.var.rate" step="any" required />
+        <br />
+        <label for="cons.price.idx">Cons Price Idx :</label>
+        <input type="number" name="cons.price.idx" step="any" required />
+        <br />
+        <label for="cons.conf.idx">Cons Conf Idx:</label>
+        <input type="number" name="cons.conf.idx" step="any" required />
+        <br />
+        <label for="euribor3m">euribor3m :</label>
+        <input type="number" name="euribor3m" step="any" required />
+        <br />
+        <label for="nr.employed">nr.employed :</label>
+        <input type="number" name="nr.employed" step="any" required />
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <br />
+    {% if output %}
+    <div class="main"><h1>Result for Last Data : {{output}}</h1></div>
+    {% endif %}
+  </body>
+</html>
