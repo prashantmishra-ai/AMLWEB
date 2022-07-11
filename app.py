@@ -59,5 +59,3 @@ def index():
     my_data = dict_str
     output = my_data.get("Results")[0]
     return render_template("index.html", output=output)
-    
-app.run(port=8000, host='0.0.0.0')
