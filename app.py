@@ -60,4 +60,4 @@ def index():
     output = my_data.get("Results")[0]
     return render_template("index.html", output=output)
     
-app.run(port=8100, host='0.0.0.0')
+app.run(port=8000, host='0.0.0.0')
